@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Krithika V — Python &amp; SQL Data Analyst</title>
+  <meta name="description" content="Python and SQL Data Analyst with 2.5+ years delivering Machine Learning, Data Mining, and NLP solutions in enterprise heavy-machinery ecosystems, including production-ready Multi-Agent AI workflows and MCP-based LLM tool integration." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #faf5ed;
+      --bg-elev: #f4ecde;
+      --ink: #2a221b;
+      --ink-soft: #5a4e42;
+      --muted: #8a7c6d;
+      --accent: #b85c38;
+      --accent-soft: #d98a5f;
+      --accent-bg: #f7e7db;
+      --rule: #e6d9c4;
+      --max: 820px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 64px 28px 96px;
+    }
+
+    /* Hero */
+    header.hero {
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 48px;
+    }
+
+    h1 {
+      font-weight: 700;
+      font-size: clamp(2.1rem, 5vw, 2.8rem);
+      letter-spacing: -0.025em;
+      margin: 0 0 6px;
+      line-height: 1.1;
+    }
+
+    .role {
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 1rem;
+      letter-spacing: 0.01em;
+      margin: 0 0 18px;
+    }
+
+    .tagline {
+      color: var(--ink-soft);
+      font-size: 1.02rem;
+      margin: 0 0 24px;
+      max-width: 62ch;
+    }
+
+    .tagline strong { color: var(--ink); font-weight: 600; }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: var(--ink-soft);
+      background: var(--bg-elev);
+      border: 1px solid var(--rule);
+      padding: 6px 12px;
+      border-radius: 999px;
+      margin-bottom: 20px;
+    }
+
+    .status::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #4caf50;
+      box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.18);
+    }
+
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 14px;
+      font-size: 0.9rem;
+    }
+
+    .contact a, .contact span.loc {
+      color: var(--ink-soft);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .contact a:hover { color: var(--accent); }
+
+    .contact .dot {
+      color: var(--rule);
+      user-select: none;
+    }
+
+    /* Sections */
+    section { margin-bottom: 56px; }
+
+    h2 {
+      font-weight: 700;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      margin: 0 0 24px;
+      padding-bottom: 10px;
+      color: var(--accent);
+      border-bottom: 1px solid var(--rule);
+    }
+
+    /* Skills — chip groups */
+    .skill-group {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 14px 20px;
+      align-items: start;
+      margin-bottom: 16px;
+    }
+
+    .skill-group:last-child { margin-bottom: 0; }
+
+    .skill-label {
+      font-size: 0.82rem;
+      color: var(--ink-soft);
+      font-weight: 500;
+      padding-top: 6px;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .chip {
+      display: inline-block;
+      padding: 4px 10px;
+      background: var(--bg-elev);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      font-size: 0.82rem;
+      color: var(--ink);
+      font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+    }
+
+    .chip.expert {
+      background: var(--accent-bg);
+      border-color: var(--accent-soft);
+      color: var(--accent);
+    }
+
+    /* Entries */
+    .entry { margin-bottom: 28px; }
+    .entry:last-child { margin-bottom: 0; }
+
+    .entry-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 4px;
+    }
+
+    .entry-title {
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--ink);
+    }
+
+    .entry-date {
+      font-size: 0.85rem;
+      color: var(--muted);
+      white-space: nowrap;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .entry-sub {
+      font-size: 0.92rem;
+      color: var(--ink-soft);
+      margin-bottom: 10px;
+    }
+
+    .entry-sub .org { color: var(--accent); font-weight: 500; }
+    .entry-sub em { font-style: italic; }
+
+    .entry ul {
+      margin: 8px 0 0;
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .entry ul li {
+      position: relative;
+      padding-left: 18px;
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+      color: var(--ink-soft);
+    }
+
+    .entry ul li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--accent-soft);
+      font-weight: 500;
+    }
+
+    .entry ul li strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 64px;
+      padding-top: 24px;
+      border-top: 1px solid var(--rule);
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+      .wrap { padding: 40px 20px 64px; }
+      .skill-group { grid-template-columns: 1fr; gap: 6px; }
+      .skill-label { padding-top: 0; }
+      .entry-date { font-size: 0.8rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <header class="hero">
+      <h1>Krithika V</h1>
+      <p class="role">Python &amp; SQL Data Analyst</p>
+      <p class="tagline">
+        Python and SQL Data Analyst with 2.5+ years of experience delivering <strong>Machine Learning, Data Mining, and NLP solutions</strong> inside enterprise heavy-machinery ecosystems. Specialized in building production-ready Multi-Agent AI workflows with LangGraph, configuring Model Context Protocol (MCP) servers for LLM tool integration, and designing prompt-engineered agents with context and memory management across multiterabyte Snowflake and Oracle cloud environments.
+      </p>
+      <div class="status">Open to new opportunities — data, ML, AI engineering</div>
+      <div class="contact">
+        <a href="mailto:krithikavaradharajan@gmail.com">krithikavaradharajan@gmail.com</a>
+        <span class="dot">·</span>
+        <a href="https://linkedin.com/in/krithika-v" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </header>
+
+    <section>
+      <h2>Skills</h2>
+
+      <div class="skill-group">
+        <div class="skill-label">AI &amp; Agents</div>
+        <div class="chips">
+          <span class="chip">Multi-Agent Orchestration</span>
+          <span class="chip">Agentic AI Workflows</span>
+          <span class="chip">MCP Servers</span>
+          <span class="chip">Context Engineering</span>
+          <span class="chip">LLM Tool Design</span>
+          <span class="chip">Memory Systems</span>
+          <span class="chip">NLP</span>
+          <span class="chip">Computer Vision</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-label">Machine Learning</div>
+        <div class="chips">
+          <span class="chip">Supervised ML</span>
+          <span class="chip">Unsupervised ML</span>
+          <span class="chip">Data Mining</span>
+          <span class="chip">Recommendation Systems</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-label">Programming</div>
+        <div class="chips">
+          <span class="chip expert">Python</span>
+          <span class="chip expert">SQL</span>
+          <span class="chip">DAX</span>
+          <span class="chip">Snowpark</span>
+          <span class="chip">Selenium</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-label">Cloud &amp; Automation</div>
+        <div class="chips">
+          <span class="chip">Azure</span>
+          <span class="chip">Power Apps</span>
+          <span class="chip">Power Automate</span>
+          <span class="chip">SharePoint Workflow Clusters</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-label">Databases</div>
+        <div class="chips">
+          <span class="chip">Snowflake Cloud Data Warehousing</span>
+          <span class="chip">Oracle Relational Database Architecture</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-label">BI Tools</div>
+        <div class="chips">
+          <span class="chip">Power BI Tabular Modeling</span>
+          <span class="chip">Tableau Enterprise Analytics</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+
+      <div class="entry">
+        <div class="entry-head">
+          <div class="entry-title">Associate Engineer — Data Analytics</div>
+          <div class="entry-date">Jul 2024 — Present</div>
+        </div>
+        <div class="entry-sub"><span class="org">Caterpillar Inc.</span> · Chennai, India</div>
+        <ul>
+          <li>Architected a <strong>multi-agent orchestration system</strong> using LangGraph and Python, integrating specialized agents for Snowflake SQL query generation and interactive data validation with users, Power BI report automation, and Tableau dashboard management into a unified agentic workflow with persistent memory across sessions.</li>
+          <li>Designed and deployed <strong>LLM tool interfaces</strong> by configuring Model Context Protocol (MCP) servers to expose enterprise schema metadata, enabling LLMs to securely query multiterabyte Snowflake and Oracle databases in real time.</li>
+          <li>Engineered <strong>prompt templates and context management strategies</strong> for production LLM agents, optimizing response accuracy and cutting token overhead across automated business workflows.</li>
+          <li>Developed autonomous agents for Power BI and Tableau report automation, eliminating manual dashboard refresh cycles and enabling event-driven, scheduled report delivery to regional stakeholders.</li>
+          <li>Engineered low-code internal administration tools using Power Apps backed by Flask microservices, integrating Power Automate logic for automated database indexing across cross-functional asset libraries.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <div class="entry-title">Data Analysis Intern</div>
+          <div class="entry-date">Dec 2023 — Jul 2024</div>
+        </div>
+        <div class="entry-sub"><span class="org">Caterpillar Inc.</span> · Chennai, India</div>
+        <ul>
+          <li>Developed analytics workflows using Power BI tabular models to produce data visualizations utilized directly by regional management networks.</li>
+          <li>Executed complex database logic across enterprise Snowflake and Oracle schemas to isolate, clean, and model downstream business data products using Python.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <div class="entry-title">Data Science Intern</div>
+          <div class="entry-date">Jun 2022 — Dec 2022</div>
+        </div>
+        <div class="entry-sub"><span class="org">Analytics Vidhya</span> · Gurgaon, India</div>
+        <ul>
+          <li>Built context-based recommendation systems using vector databases and dense text embeddings, leveraging Word2Vec and FastText models to capture semantic similarity across user interaction data.</li>
+          <li>Designed and validated end-to-end NLP pipelines integrating embedding generation, vector indexing, and similarity-based retrieval to power personalized content recommendations at scale.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Selected Projects</h2>
+
+      <div class="entry">
+        <div class="entry-head">
+          <div class="entry-title">Multi-Agent BI &amp; SQL Orchestration System</div>
+          <div class="entry-date">2024 — Present</div>
+        </div>
+        <ul>
+          <li>Built a <strong>LangGraph</strong>-based multi-agent system integrating a Snowflake SQL generation and interactive data validation agent, a Power BI automation agent, and a Tableau dashboard agent under a single orchestrator with memory checkpointing, reducing end-to-end reporting workflows from ~1 week to 3–4 hours.</li>
+          <li>Designed MCP server tool interfaces with structured input/output schemas, enabling the orchestrator LLM to route tasks intelligently and handle tool failures gracefully across the pipeline.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <div class="entry-title">Heavy Machinery Predictive Maintenance System</div>
+          <div class="entry-date">2024 — Present</div>
+        </div>
+        <ul>
+          <li>Developed and deployed tree-based predictive analytics models utilizing Machine Learning and Data Mining techniques on live sensor stream telemetry.</li>
+          <li>Minimized heavy equipment operational downtime by anticipating structural component failures before critical engineering threshold breaches.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <div class="entry-title">Dealer Inventory Visibility &amp; Stock Deficit Optimization</div>
+          <div class="entry-date">2024</div>
+        </div>
+        <ul>
+          <li>Integrated Python data analysis layers into enterprise Power BI environments via Snowpark interfaces.</li>
+          <li>Produced high-granularity asset replenishment layouts that optimized safety-stock allocations and flagged real-time field availability constraints.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <div class="entry-title">Automated Talent Pipeline Matcher (OCR &amp; NLP)</div>
+          <div class="entry-date">2022</div>
+        </div>
+        <ul>
+          <li>Engineered a candidate parsing system coupling computer vision OCR extraction with NLP tokenizers to standardize multi-structured document inputs.</li>
+          <li>Fully automated high-volume hiring pipeline classification shortlists, eliminating manual screening steps.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <div class="entry">
+        <div class="entry-head">
+          <div class="entry-title">MSc. Data Science (CGPA: 8.5 / 10.0)</div>
+          <div class="entry-date">Jun 2019 — Jun 2024</div>
+        </div>
+        <div class="entry-sub"><span class="org">PSG College of Technology</span> · Coimbatore, India</div>
+        <ul>
+          <li>Core Focus Areas: Advanced Machine Learning, Natural Language Processing, Statistical Data Modelling, Deep Learning Systems.</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      Get in touch · <a href="mailto:krithikavaradharajan@gmail.com">krithikavaradharajan@gmail.com</a>
+    </footer>
+
+  </div>
+</body>
+</html>
